@@ -42,17 +42,18 @@ if __name__ == "__main__":
     while True:
 
         cli = input(target + "$ ")
+        logFile.write(cli + "\n")
         if cli == "exit":
             break
-        if cli == null:
+        if len(cli) == 0:
             print("")
         command = cli.split(" ")
         if len(command) == 1:
             subprocess.run([command[0]])
         if len(command) == 2:
-            subprocess.run([command[0]], [command[1]])
+            subprocess.run([command[0], command[1]])
         if len(command) == 3:
-            subprocess.run([command[0]], [command[1]], [command[2]])
+            subprocess.run([command[0], command[1], command[2]])
         if len(command) > 3:
             #todo
             print("Error")
