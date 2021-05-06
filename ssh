@@ -1,0 +1,3 @@
+#! bin/bash
+
+python3 /path/ssh_spoof.py $1
